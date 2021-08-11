@@ -56,12 +56,12 @@ class DB {
                 ) 
                 as session_info_formatted,
                 session.id as session_id
-            FROM SESSION
+            FROM session
 
             INNER JOIN role 
                 ON session.id = role.sessionid
             
-            INNER JOIN USER
+            INNER JOIN user
                 ON role.userid = user.id
             WHERE 
                 session.active <> 'N'
